@@ -1,27 +1,14 @@
-# MARKDOWN
-- **Lightweight markup language** with a plain text formatting syntax
-- Can be converted into HTML/XHTML and other formats
-- It's main purpose is readability and ease of use
-
-
-### What Is It Used For?
-- Readme Files (like this document)
-- Forum $ Blog Posts
-- Used in Many Static Site Generators
-
-### Things You Can Format (not all listed):
-- Headings
-- Lists
-- Emphasis
-- Links
-- Blocks of Code
-- Images
-- Blockquotes
-- Horizontal Rules
-- Tables
-
-### HEADINGS
 <!-- Headings -->
+`INPUT: Headigs`
+```
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+```
+`OUTPUT:`
 # Heading 1
 ## Heading 2
 ### Heading 3
@@ -29,109 +16,206 @@
 ##### Heading 5
 ###### Heading 6
 
-### Italics
+___
+
 <!-- Italics -->
-* This text* is italic
+`INPUT: Italics`
+```
+*This text* is italic
+
+\*This symbol\* is escaped
+
+_This text_ is italic
+```
+`OUTPUT: `
+
+*This text* is italic
+
+\*This symbol\* is escaped
+
 _This text_ is italic
 
-### Strong
+***
+
 <!-- Strong -->
-**This is** strong
-__this text__ is italic
+`INPUT: Strong`
+```
+**This text** is strong
 
-### Strikethrough
+__This text__ is strong
+```
+`OUTPUT: `
+
+**This text** is strong
+
+__This text__ is strong
+
+___
+
 <!-- Strikethrough -->
+`INPUT: Strikethrough`
+```
+~~This text~~ is strikethrough  
+```
+
+`OUTPUT: `
+
 ~~This text~~ is strikethrough
-
-### Horizontal Rule
-<!-- Horizontal Rule -->
+___
+<!-- Horizontal rule  -->
+`INPUT: Horizontal rule`
+```
 ---
-____
+___
+```
 
-### Blockquote
+`OUTPUT: `
+
+---
+___
+
 <!-- Blockquote -->
-> this is a quote
+`INPUT: Blockquote`
+```
+> This is a quate
+```
 
-### Links
+`OUTPUT: `
+
+> This is a quate
+___
+
 <!-- Links -->
-[Hashicorp](http://hashicorp.com)
+`INPUT: Links`
+```
+[NataDEV](http://natadev.nl)
 
-### Unordered Lists
-<!-- Unordered Lists -->
-* Item1
-* Item2
-* Item3
-  * Nested Item1
-  * Nested Item2
+[NataDEV](http://natadev.nl "Nata's website") 
+```
 
-### Tables of contents
-<!-- Tables of contents -->
-1. Apple
-   1. green
-   2. red
-2. Orange
-3. Banana
+`OUTPUT: `
 
-### Inline Code Block
+[NataDEV](http://natadev.nl)
+
+[NataDEV](http://natadev.nl "Nata's website")
+___
+<!-- UL -->
+`INPUT: UL`
+```
+* Item 1 
+* Item 2
+* Item 3
+    * Nested Item 1
+    * Nested Item 2
+```
+
+`OUTPUT: `
+* Item 1 
+* Item 2
+* Item 3
+    * Nested Item 1
+    * Nested Item 2
+___
+<!-- OL -->
+`INPUT: OL`
+```
+1. Item 1
+1. Item 2
+1. Item 3
+    1. Nested item 1
+    1. Nested item 2
+```
+`OUTPUT: `
+1. Item 1
+1. Item 2
+1. Item 3
+    1. Nested item 1
+    1. Nested item 2
+---
 <!-- Inline Code Block -->
+
+`INPUT: Inline code block`
+```
+`<p>This is a paragraph</p>`
+```
+
+`OUTPUT: `
 `<p>This is a paragraph</p>`
 
-### Images
+---
 <!-- Images -->
-![Markdown Logo](https://www.hashicorp.com/favicon.svg)
+`INPUT: Images`
+```
+![Markdown Logo](https://markdown-here.com/img/icon256.png)
+```
+`OUTPUT: `
+![Markdown Logo](https://markdown-here.com/img/icon256.png)
 
+___
+<!-- Github Markdown -->
 
-<!-- Github Markdow -->
-
-### Line block
-Install unzip: `sudo apt-get install unzip`
-
-### Code Blocks
 <!-- Code Blocks -->
-```bash
-# bash script
-npm install
-npm start```
+`INPUT: Code Blocks`
+```
+    ```bash
+        npm install
 
+        npm start
+    ```
+    ```javascript
+        function add(num1, num2){
+            return num1 + num2;
+        }
+    ```
+    ```python
+        def add(num1, num2) {
+            return num1 + num2
+        }
+    ```
+```
+
+`OUTPUT: `
+```bash
+        npm install
+
+        npm start
+```
 ```javascript
-# javascript function
-    function add(num1, num2) {
-        return num1 + num2;
+        function add(num1, num2){
+            return num1 + num2;
+        }
+```
+```python
+    def add(num1, num2) {
+        return num1 + num2
     }
 ```
+___
+<!-- Tables -->
+`INPUT: Tables`
+```
+| Name     | Email          |
+| -------- | -------------- |
+| John Doe | john@gmail.com |
+| John Doe | john@gmail.com |
+```
+`OUTPUT: `
+| Name     | Email          |
+| -------- | -------------- |
+| John Doe | john@gmail.com |
+| John Doe | john@gmail.com |
 
-```python
-# Python function
-    def add (num1, num2):
-        return num1 + num2
+---
+<!-- Task Lists -->
+`INPUT: Task Lists`
+
+```
+* [x] Task 1
+* [x] Task 2
+* [ ] Task 3
 ```
 
-### Task Lists
-<!-- Task Lists -->
-* [x] Task1
-* [x] Task2
-* [ ] Task3 
-
-### Tables
-<!-- Tables -->
-| Name | Email |
-| ----: | :----- |
-| Ion   | ion@hashicorp.com |
-| office | office@acme.com |
-
-
-### Foot notes
-<!-- Foot notes -->
-This article is an exercise [^1].
-Markdown is awesome.
-
-[^1]: By Ion Ermurachi
-
-### Foldable Section
-<details>
-    <summary> Section Header</summary>
-    This is an optional section
-
-
- 
-
+`OUTPUT: `
+* [x] Task 1
+* [x] Task 2
+* [ ] Task 3
